@@ -1,0 +1,165 @@
+$nav-height : 50px ;
+$nav-color : #083d77 ;
+$nav-text-color : #acbbca ;
+
+
+
+
+
+
+.wrapper{
+  >.navbar836{
+    width: 100% ;
+    background-color: $nav-color;
+
+    a{
+      text-decoration: none;
+    }
+
+    .nav{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 0 20px;
+
+      .logo{
+        a{
+          height: $nav-height;
+          display: block;
+        }
+
+        img{
+          max-height: 100%;
+          object-position: center;
+          object-fit: contain;
+        }
+      }
+
+      .right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        >div, >div>*{
+          font-size: large;
+          cursor: pointer;
+          line-height: 50px;
+          padding: 0 15px;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          color : $nav-text-color ;
+          .hamburger{
+            >div{
+              display: flex;
+              align-items: center;
+            }
+          }
+
+
+          >*{
+            font-size: xx-large;
+
+
+            >*{
+              font-size: xx-large;
+            }
+          }
+          .empty{
+            font-size: small;
+          }
+
+
+        }
+      }
+      .hamburger{
+        .ham{
+          display: none;
+
+          &.active{
+            display: flex;
+          }
+        }
+      }
+
+      .menu{
+        font-family: sans-serif;
+        position: fixed;
+        background-color: #083d77 ;
+        width: 70%;
+        top : 0 ;
+        left : -200vw ;
+        height: 100%;
+        transition: 0.6s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 3px 4px rgba(1,1,1,0.3);
+
+        ul{
+          list-style-type: none;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+        }
+
+        a{
+          text-align: center;
+          display: block;
+          width: 100%;
+          text-decoration: none;
+          color: white ;
+          padding: 15px;
+          &:hover{
+            font-weight: bolder;
+          }
+        }
+      }
+
+      .bottom-nav{
+        position: fixed;
+        bottom: 0;
+        left : 0 ;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 5px;
+        transition: 0.6s;
+        box-shadow: 1px 1px 7px 3px darkred;
+        >div{
+          background-color: red;
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+          border-right: solid 1px deeppink;
+          a{
+            padding: 5px;
+            display: block;
+            color:navajowhite;
+          }
+          &:hover{
+            background-color: hotpink;
+          }
+
+        }
+      }
+
+      &.active{
+        .menu{
+          left : 0 ;
+        }
+        .bottom-nav{
+          bottom: -100%;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+    }
+  }
+}

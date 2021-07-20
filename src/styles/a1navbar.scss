@@ -1,0 +1,104 @@
+@import "./global.scss";
+
+$navFont : sans-serif ;
+
+.wrapper{
+  width: 100%;
+  >.navbar5598{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between ;
+    background-color: #083d77;
+    padding : 0 20px ;
+    transition: $navTrans;
+
+    .left{
+      flex : 30% ;
+      background-color: yellowgreen;
+    }
+    .right{
+      flex : 30% ;
+      display: flex;
+      flex-direction: row;
+      flex-wrap : nowrap;
+      background-color: yellow;
+    }
+
+    .logo{
+      width: 100% ;
+      height: 100%;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+
+
+    .ham{
+      color:white;
+      display: none;
+      line-height: $navHeight;
+      transition: $navTrans;
+      &.active{
+        display: block;
+      }
+    }
+    .menubar{
+      position: fixed;
+      background-color: #083d77 ;
+      width: 70%;
+      top : 0 ;
+      left : -200vw ;
+      height: 100%;
+      transition: $navTrans;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul{
+        list-style-type: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        a{
+          font-family: $navFont;
+          padding: 10px;
+          display: block;
+          color: #d9dcd6 ;
+          text-decoration: none;
+          cursor: pointer;
+          text-align: center;
+          &:hover{
+            font-weight: bolder;
+          }
+
+
+        }
+      }
+    }
+
+    &.active{
+      .menubar{
+        left : 0 ;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
